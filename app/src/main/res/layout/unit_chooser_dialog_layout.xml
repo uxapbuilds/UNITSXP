@@ -14,28 +14,27 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/momcakethin"
             android:gravity="center"
-            android:fontFamily="@font/cocogoosenonum"
-            android:textStyle="bold"
-            android:textColor="@color/black"
             android:text="Select Unit"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <View
-            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:layout_margin="10dp"
             android:background="@android:color/darker_gray" />
 
 
         <in.goodiebag.carouselpicker.CarouselPicker
             android:id="@+id/unitCarousel"
-            app:items_visible="three"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_height="wrap_content"
-            />
+            app:items_visible="three" />
 
 
         <LinearLayout
@@ -43,15 +42,16 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:orientation="horizontal">
+
             <Button
                 android:id="@+id/btnSetUnit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/cocogoosenonum"
                 android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/momcakethin"
                 android:text="Set"
                 android:textColor="@color/black"
-                android:textSize="12sp" />
+                android:textSize="24sp" />
         </LinearLayout>
 
     </LinearLayout>

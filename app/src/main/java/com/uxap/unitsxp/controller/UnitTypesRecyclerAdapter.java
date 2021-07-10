@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class UnitTypesRecyclerAdapter extends RecyclerView.Adapter<UnitTypesRecyclerViewHolder> {
     ArrayList<ConversionTypeInfoModel> conversionTypeInfoModelArrayList;
     Activity activity;
+
     public UnitTypesRecyclerAdapter(ArrayList<ConversionTypeInfoModel> conversionTypeInfoModelArrayList, Activity activity) {
         this.conversionTypeInfoModelArrayList = conversionTypeInfoModelArrayList;
         this.activity = activity;
@@ -35,7 +36,7 @@ public class UnitTypesRecyclerAdapter extends RecyclerView.Adapter<UnitTypesRecy
     @Override
     public void onBindViewHolder(@NonNull UnitTypesRecyclerViewHolder holder, int position) {
         ConversionTypeInfoModel conversionTypeInfoModel = conversionTypeInfoModelArrayList.get(position);
-        Log.i("HOME_RES_DATA", conversionTypeInfoModel.getConversionTypeName()+"/"+conversionTypeInfoModel.getImgDrawableId());
+        Log.i("HOME_RES_DATA", conversionTypeInfoModel.getConversionTypeName() + "/" + conversionTypeInfoModel.getImgDrawableId());
         holder.getIvUnitLogo().setImageResource(conversionTypeInfoModel.getImgDrawableId());
         holder.getTxtUnitType().setText(conversionTypeInfoModel.getConversionTypeName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {

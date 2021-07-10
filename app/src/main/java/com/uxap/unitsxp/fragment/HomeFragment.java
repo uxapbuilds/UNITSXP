@@ -21,14 +21,10 @@ import com.uxap.unitsxp.model.ConversionTypeInfoModel;
 
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class HomeFragment extends Fragment {
     private RecyclerView rvConversionTypes;
     private DataManager dataManager;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -68,7 +64,7 @@ public class HomeFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
-    public ArrayList<ConversionTypeInfoModel> retrievedData(){
+    public ArrayList<ConversionTypeInfoModel> retrievedData() {
         return dataManager.retrieveConversionTypeInfo();
     }
 }

@@ -1,18 +1,29 @@
 package com.uxap.unitsxp.model;
 
+import android.content.Context;
+import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.uxap.unitsxp.constants.ConversionTypes;
 import com.uxap.unitsxp.constants.Units;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import in.goodiebag.carouselpicker.CarouselPicker;
 
-public class CarouselData {
-    public List<CarouselPicker.PickerItem> getUnitArray(String conversionType){
+public class CarouselData extends AppCompatActivity {
+    public List<CarouselPicker.PickerItem> getUnitArray(String conversionType, Context context) throws JSONException {
         List<CarouselPicker.PickerItem> textItems = new ArrayList<>();
         int textSize = 6;
-        switch (conversionType){
+        switch (conversionType) {
             case ConversionTypes.LENGTH:
                 //textItems.add(new CarouselPicker.TextItem("SELECT\nUNIT", textSize));
                 textItems.add(new CarouselPicker.TextItem(Units.LENGTH_KM, textSize));
@@ -91,8 +102,34 @@ public class CarouselData {
                 textItems.add(new CarouselPicker.TextItem(Units.TIME_PLANCK_TIME, textSize));
                 break;
 
+            case ConversionTypes.CURRENCY:
+                JSONArray currencyDataJArr = new JSONObject(jsonParser(context)).getJSONArray("currency_data");
+
+                for (int i = 0; i < currencyDataJArr.length(); i++) {
+                    String currencyCarouselText = "";
+                    JSONObject currencyJObj = currencyDataJArr.getJSONObject(i);
+                    currencyCarouselText += currencyJObj.getString("name").replace(" ", "\n") + " '" + currencyJObj.getString("symbol") + "'" + "\n" + "(" + currencyJObj.getString("code") + ")";
+                    textItems.add(new CarouselPicker.TextItem(currencyCarouselText, textSize));
+                }
+                break;
+
         }
         return textItems;
+    }
+
+    public String jsonParser(Context context) {
+        String jsonArray = null;
+        try {
+            InputStream jFile = context.getAssets().open("CommonCurrency.json");
+            int size = jFile.available();
+            byte[] buffer = new byte[size];
+            jFile.read(buffer);
+            jFile.close();
+            jsonArray = new String(buffer, "UTF-8");
+        } catch (IOException e) {
+            Log.e("EXP-jsonParser", e.getMessage());
+        }
+        return jsonArray;
     }
 
 }

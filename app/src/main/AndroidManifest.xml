@@ -3,16 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.uxap.unitsxp">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
         android:fullBackupContent="false"
-        tools:replace="android:allowBackup"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UNITSXP">
-        <activity android:name=".ConversionActivity"/>
+        android:theme="@style/Theme.UNITSXP"
+        tools:replace="android:allowBackup">
+        <activity android:name=".ConversionActivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

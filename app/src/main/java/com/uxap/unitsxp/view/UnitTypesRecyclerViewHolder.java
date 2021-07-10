@@ -12,6 +12,7 @@ import com.uxap.unitsxp.R;
 public class UnitTypesRecyclerViewHolder extends RecyclerView.ViewHolder {
     private ImageView ivUnitLogo;
     private TextView txtUnitType;
+
     public UnitTypesRecyclerViewHolder(@NonNull View itemView) {
         super(itemView);
         ivUnitLogo = itemView.findViewById(R.id.ivUnitLogo);

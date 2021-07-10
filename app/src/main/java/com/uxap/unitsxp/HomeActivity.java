@@ -28,7 +28,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        actSearchUnit=findViewById(R.id.actSearchUnits);
+        actSearchUnit = findViewById(R.id.actSearchUnits);
         dataManager = new DataManager(this);
         conversionTypeInfoModelArrayList = dataManager.retrieveConversionTypeInfo();
 
@@ -47,8 +47,8 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String unitNameSelected = listConversionTypesAdapter.getItem(position);
-                for(ConversionTypeInfoModel conversionTypeInfo: conversionTypeInfoModelArrayList){
-                    if(conversionTypeInfo.getConversionTypeName().equalsIgnoreCase(unitNameSelected)) {
+                for (ConversionTypeInfoModel conversionTypeInfo : conversionTypeInfoModelArrayList) {
+                    if (conversionTypeInfo.getConversionTypeName().equalsIgnoreCase(unitNameSelected)) {
 
                         Intent toConversionActivity = new Intent(HomeActivity.this, ConversionActivity.class);
                         toConversionActivity.putExtra(KEY_UNIT_TYPE_NAME, conversionTypeInfo.getConversionTypeName());
@@ -64,9 +64,9 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    public ArrayList<String> actAdapterData(){
+    public ArrayList<String> actAdapterData() {
         ArrayList<String> unitNames = new ArrayList<>();
-        for (ConversionTypeInfoModel conversionTypeInfoModel:conversionTypeInfoModelArrayList){
+        for (ConversionTypeInfoModel conversionTypeInfoModel : conversionTypeInfoModelArrayList) {
             unitNames.add(conversionTypeInfoModel.getConversionTypeName());
         }
         return unitNames;

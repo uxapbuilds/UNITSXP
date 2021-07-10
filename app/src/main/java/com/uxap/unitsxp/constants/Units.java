@@ -64,10 +64,6 @@ public class Units {
     public static final String TIME_DAY = "DAY\n(d)";
     public static final String TIME_WEEK = "WEEK";
     public static final String TIME_MONTH = "MONTH";
-//    public static final String TIME_YEAR = "YEAR\n(y)";
-//    public static final String TIME_DECADE = "DECADE";
-//    public static final String TIME_CENTURY = "CENTURY";
-//    public static final String TIME_MILLENNIUM = "MILLENNIUM";
     public static final String TIME_MICRO_SECOND = "MICRO\nSECOND\n(µs)";
     public static final String TIME_NANO_SECOND = "NANO\nSECOND\n(ns)";
     public static final String TIME_PICO_SECOND = "PICO\nSECOND\n(ps)";

@@ -1,5 +1,7 @@
 package com.uxap.unitsxp.unitdata;
+
 import com.uxap.unitsxp.constants.Units;
+
 public class EnergyData {
     private String fromUnit;
     private String toUnit;
@@ -12,13 +14,13 @@ public class EnergyData {
     public String getConvertedValue(double val) {
         String result = "0 ?";
 
-        if(fromUnit.equals(toUnit)){
-            return val+" -";
+        if (fromUnit.equals(toUnit)) {
+            return val + " -";
         }
 
         //double check eV
 
-        switch(fromUnit) {
+        switch (fromUnit) {
             case Units.ENERGY_JOULE:
                 switch (toUnit) {
                     case Units.ENERGY_KILOCALORIE:
@@ -148,7 +150,7 @@ public class EnergyData {
                         result = val / 1.162 + " kcal";
                         break;
                     case Units.ENERGY_KILOJOULE:
-                        result = val *3.6 + " kJ";
+                        result = val * 3.6 + " kJ";
                         break;
                     case Units.ENERGY_GRAM_CALORIE:
                         result = val * 860 + " cal";
@@ -160,7 +162,7 @@ public class EnergyData {
                         result = val * 2.2469422907138E+22 + " eV";
                         break;
                     case Units.ENERGY_BRITISH_THERMAL_UNIT:
-                        result = val *3.412 + " Btu";
+                        result = val * 3.412 + " Btu";
                         break;
                     case Units.ENERGY_US_THERM:
                         result = val / 29300 + " therm[US]";
@@ -223,7 +225,7 @@ public class EnergyData {
                         result = val * 1.519587736557E-22 + " Btu";
                         break;
                     case Units.ENERGY_US_THERM:
-                        result = val* 1.5189336881544E-27+ " therm[US]";
+                        result = val * 1.5189336881544E-27 + " therm[US]";
                         break;
                     case Units.ENERGY_FOOT_POUND:
                         result = val * 1.1817053550745E-19 + " ft⋅lb";
@@ -253,7 +255,7 @@ public class EnergyData {
                         result = val * 6.5807322337686E+21 + " eV";
                         break;
                     case Units.ENERGY_US_THERM:
-                        result = val* 9.9956958825948E-6+ " therm[US]";
+                        result = val * 9.9956958825948E-6 + " therm[US]";
                         break;
                     case Units.ENERGY_FOOT_POUND:
                         result = val * 777.6486520956 + " ft⋅lb";
@@ -283,7 +285,7 @@ public class EnergyData {
                         result = val * 6.5835658778169E+26 + " eV";
                         break;
                     case Units.ENERGY_BRITISH_THERMAL_UNIT:
-                        result = val* 100043.05970746 + " Btu";
+                        result = val * 100043.05970746 + " Btu";
                         break;
                     case Units.ENERGY_FOOT_POUND:
                         result = val * 77798350.533022 + " ft⋅lb";
@@ -301,10 +303,10 @@ public class EnergyData {
                         result = val * 0.0013558179 + " kJ";
                         break;
                     case Units.ENERGY_GRAM_CALORIE:
-                        result = val *  0.3240482668 + " cal";
+                        result = val * 0.3240482668 + " cal";
                         break;
                     case Units.ENERGY_WATT_HOUR:
-                        result = val * 0.0003766161  + " Wh";
+                        result = val * 0.0003766161 + " Wh";
                         break;
                     case Units.ENERGY_KILOWATT_HOUR:
                         result = val * 3.7661609674711E-7 + " kWh";
@@ -313,7 +315,7 @@ public class EnergyData {
                         result = val * 8.4623463514466E+18 + " eV";
                         break;
                     case Units.ENERGY_BRITISH_THERMAL_UNIT:
-                        result = val* 0.0012859278 + " Btu";
+                        result = val * 0.0012859278 + " Btu";
                         break;
                     case Units.ENERGY_US_THERM:
                         result = val * 1.2853742954043E-8 + " therm[US]";

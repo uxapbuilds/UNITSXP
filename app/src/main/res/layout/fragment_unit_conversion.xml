@@ -182,9 +182,9 @@
             android:id="@+id/ibShare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="5dp"
-            android:layout_marginStart="6dp"
             android:src="@drawable/ic_baseline_share_24" />
     </LinearLayout>
 

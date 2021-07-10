@@ -38,6 +38,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.github.GoodieBag:CarouselPicker:v1.2'
     implementation 'androidx.preference:preference:1.1.1'
-    implementation 'com.github.fornewid:neumorphism:0.3.0'
-
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 }

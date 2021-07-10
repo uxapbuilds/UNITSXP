@@ -17,28 +17,27 @@
             android:orientation="horizontal">
 
             <TextView
-                android:fontFamily="@font/cocogoosenonum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textSize="20sp"
+                android:background="#F4F4F4"
+                android:fontFamily="@font/cocogoosenonum"
                 android:padding="10dp"
-                android:background="#F4F4F4"/>
+                android:text="@string/app_name"
+                android:textSize="20sp" />
 
             <AutoCompleteTextView
-                android:drawableStart="@drawable/ic_baseline_search_24"
-                android:lines="1"
-                android:textSize="14sp"
-                android:drawablePadding="10dp"
-                android:padding="10dp"
-                android:hint="Search Type"
-                android:background="@color/white"
-                android:fontFamily="@font/cocogoosenonum"
                 android:id="@+id/actSearchUnits"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:ems="10">
-            </AutoCompleteTextView>
+                android:background="@color/white"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="@font/cocogoosenonum"
+                android:hint="Search Type"
+                android:lines="1"
+                android:padding="10dp"
+                android:textSize="14sp"></AutoCompleteTextView>
 
         </LinearLayout>
 
@@ -49,7 +48,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
         </FrameLayout>
 
     </LinearLayout>
