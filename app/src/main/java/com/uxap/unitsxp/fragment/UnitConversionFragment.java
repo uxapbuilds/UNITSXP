@@ -29,7 +29,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.uxap.unitsxp.R;
 import com.uxap.unitsxp.constants.ConversionTypes;
-import com.uxap.unitsxp.controller.ConversionProcessor;
+import com.uxap.unitsxp.model.ConversionProcessor;
 import com.uxap.unitsxp.model.CarouselData;
 import com.uxap.unitsxp.unitdata.CurrencyAPI;
 

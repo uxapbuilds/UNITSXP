@@ -1,4 +1,4 @@
-package com.uxap.unitsxp.controller;
+package com.uxap.unitsxp.model;
 
 import com.uxap.unitsxp.fragment.UnitConversionFragment;
 import com.uxap.unitsxp.unitdata.AreaData;
